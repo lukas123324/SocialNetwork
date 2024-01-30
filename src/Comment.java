@@ -1,17 +1,19 @@
 public class Comment {
-    private String author;
+    private User author;
     private String text;
 
-    public Comment(String author, String text) {
+    // Constructer
+    public Comment(User author, String text) {
         this.author = author;
         this.text = text;
     }
 
-    public String getAuthor() {
+    // Getter + Setter
+    public User getAuthor() {
         return author;
     }
 
-    public void setAuthor(String author) {
+    public void setAuthor(User author) {
         this.author = author;
     }
 
@@ -23,7 +25,12 @@ public class Comment {
         this.text = text;
     }
 
+    // toString
+    @Override
     public String toString() {
-        return author + ": " + text;
+        return "Comment{" +
+                "author=" + author +
+                ", text='" + text + '\'' +
+                '}';
     }
 }

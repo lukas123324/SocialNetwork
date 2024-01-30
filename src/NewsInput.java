@@ -9,6 +9,7 @@ public class NewsInput {
     private LocalDate timestamp;
     private int countReaders;
 
+    // Constructer
     public NewsInput(User author, String text, int likes, Comment[] comments, LocalDate timestamp, int countReaders) {
         this.author = author;
         this.text = text;
@@ -18,6 +19,7 @@ public class NewsInput {
         this.countReaders = countReaders;
     }
 
+    // Getter + Setter
     public User getAuthor() {
         return author;
     }
@@ -66,6 +68,7 @@ public class NewsInput {
         this.countReaders = countReaders;
     }
 
+    // toString
     @Override
     public String toString() {
         return "NewsInput{" +
@@ -78,6 +81,7 @@ public class NewsInput {
                 '}';
     }
 
+    // Methoden
     /**
      * Adds a like to the post.
      * a like can only be added and not removed
