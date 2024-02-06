@@ -85,6 +85,21 @@ public class NewsFeed {
     }
 
     /**
+     * This method returns a list of all Photos by searching for the author
+     * @param user
+     * @return ArrayList<NewsInput>
+     */
+    public ArrayList<String> getAllPhotosOfUser(User user) {
+        ArrayList<String> photos = new ArrayList<>();
+        for (NewsInput newsInput : this.newsInputs) {
+            if (newsInput.getAuthor().equals(user) && newsInput instanceof PhotoPost) {
+                photos.add(((PhotoPost) newsInput).getFileName());
+            }
+        }
+        return photos;
+    }
+
+    /**
      * This method prints all NewsInputs
      */
     public void printNewsFeed() {
