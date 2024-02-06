@@ -74,14 +74,23 @@ public class NewsFeed {
      * @param user
      * @return ArrayList<NewsInput>
      */
-    public ArrayList<NewsInput> searchNewsInput(User user){
+    public ArrayList<NewsInput> searchInThisNewsFeedByUser(User user){
         ArrayList<NewsInput> newsInputs = new ArrayList<>();
-        for (NewsInput newsInput : newsInputs) {
+        for (NewsInput newsInput : this.newsInputs) {
             if (newsInput.getAuthor().equals(user)) {
                 newsInputs.add(newsInput);
             }
         }
         return newsInputs;
+    }
+
+    /**
+     * This method prints all NewsInputs
+     */
+    public void printNewsFeed() {
+        for (NewsInput newsInput : newsInputs) {
+            System.out.println(newsInput);
+        }
     }
 
 }
