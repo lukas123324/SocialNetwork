@@ -23,6 +23,8 @@ public class TextPost extends NewsInput {
     public String toString() {
         return "TextPost{" +
                 "message='" + message + '\'' +
+                "author=" + getAuthor().getUserName() + '\'' +
+                "timestamp=" + getTimestamp() + '\'' +
                 '}';
     }
 

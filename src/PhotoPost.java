@@ -34,6 +34,8 @@ public class PhotoPost extends NewsInput {
         return "PhotoPost{" +
                 "header='" + header + '\'' +
                 ", fileName='" + fileName + '\'' +
+                "author=" + getAuthor().getUserName() + '\'' +
+                "timestamp=" + getTimestamp() + '\'' +
                 '}';
     }
 }
